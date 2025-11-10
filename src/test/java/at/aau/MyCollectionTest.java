@@ -44,4 +44,20 @@ public class MyCollectionTest {
         collection.add("TestString");
         assertEquals(1, collection.size(), "size should increase by 1.");
     }
+
+    @Test
+    void testRemove_SuccessfulRemovalDecreasesSize() {
+        String removedItem = "K odstranění";
+        collection.add(removedItem);
+        collection.add("Druhý prvek");
+
+        // Assert: size should be 2
+        assertEquals(2, collection.size(), "Collection should have 2 elements.");
+
+        // Akce: Zavoláme metodu remove()
+        collection.remove(removedItem);
+
+        // Assert: Velikost by měla být 1
+        assertEquals(1, collection.size(), "Size has to decrease.");
+    }
 }
