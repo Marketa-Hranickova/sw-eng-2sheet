@@ -1,5 +1,5 @@
 package at.aau;
 
 public enum ComputerType {
-    ENTRYLVL,BDGTPC,ENTHUSIASTHPC, GAMINGPC
+    ENTRYLVLPC,BDGTPC,GAMINGPC,ENTHUSIASTHPC
 }

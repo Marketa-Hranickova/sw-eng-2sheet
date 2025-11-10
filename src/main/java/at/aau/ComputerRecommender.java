@@ -11,21 +11,20 @@ public class ComputerRecommender {
         if (maxBudget <= 0) {
             throw new InvalidBudgetException("Budget must be greater than zero.");
         } else if (maxBudget <= 450) {
-            return ComputerType.ENTRYLVL;
-        } else if (maxBudget <= 600) {
+            return ComputerType.ENTRYLVLPC;
+        } else if (maxBudget <= 600) { 
             return ComputerType.BDGTPC;
-        } else if (maxBudget <= 1500) {
+        } else if (maxBudget <= 1500) { 
             return ComputerType.GAMINGPC;
-        } else {
+        } else { 
             return ComputerType.ENTHUSIASTHPC;
         }
 
     }
 
-
+    
 
 
 
 
 }
-
