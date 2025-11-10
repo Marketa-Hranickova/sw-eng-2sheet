@@ -1,4 +1,6 @@
 package Bunny.deliver;
 
-public class DeliveryStrategy {
+public interface DeliveryStrategy {
+    String getName();
 }
+
