@@ -30,8 +30,26 @@ public class MyCollection {
      * IllegalArgumentException. If the list is empty it throws an IllegalArgumentException
      * @param s String to remove
      */
-    public void remove(String s) throws IllegalArgumentException{
+    public void remove(String s) throws IllegalArgumentException {
 
+        if (cursor == 0) {
+            throw new IllegalArgumentException("Cannot remove from empty collection.");
+        }
+        int foundIndex = -1;
+        for (int i = 0; i < cursor; i++) {
+            if (list[i] != null && list[i].equals(s)) {
+                foundIndex = i;
+                break;
+            }
+        }
+        if (foundIndex == -1) {
+            throw new IllegalArgumentException("String not found in collection: " + s);
+        }
+        for (int i = foundIndex; i < cursor - 1; i++) {
+            list[i] = list[i+1];
+        }
+        list[cursor - 1] = null;
+        cursor--;
     }
 
     /**

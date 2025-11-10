@@ -47,9 +47,9 @@ public class MyCollectionTest {
 
     @Test
     void testRemove_SuccessfulRemovalDecreasesSize() {
-        String removedItem = "K odstranění";
+        String removedItem = "to be removed";
         collection.add(removedItem);
-        collection.add("Druhý prvek");
+        collection.add("second element");
 
         assertEquals(2, collection.size(), "Collection should have 2 elements.");
 
