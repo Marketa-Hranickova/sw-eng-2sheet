@@ -51,13 +51,30 @@ public class MyCollectionTest {
         collection.add(removedItem);
         collection.add("Druhý prvek");
 
-        // Assert: size should be 2
         assertEquals(2, collection.size(), "Collection should have 2 elements.");
 
-        // Akce: Zavoláme metodu remove()
         collection.remove(removedItem);
 
-        // Assert: Velikost by měla být 1
         assertEquals(1, collection.size(), "Size has to decrease.");
+    }
+
+    @Test
+    void testRemove_OnEmptyListThrowsException() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            collection.remove("any string");
+        }, "when it will bw empty collection it should throw an exeption.");
+
+        assertEquals(0, collection.size(), "after exception the size should not change.");
+    }
+
+    @Test
+    void testRemove_NonExistentItemThrowsException() {
+        collection.add("element");
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            collection.remove("non existing element");
+        }, "should throw IllegalArgumentException.");
+
+        assertEquals(1, collection.size(), "size should stay the same.");
     }
 }
