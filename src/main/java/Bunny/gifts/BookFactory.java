@@ -6,17 +6,17 @@ public class BookFactory implements GiftFactory {
         String title, author;
         switch (genre.toLowerCase()) {
             case "adventure":
-                title = "The Lost Compass";
-                author = "A. V. Smith";
+                title = "Adventure of completing homework";
+                author = "Busy Student";
                 break;
             case "science":
-                title = "Nebula's Edge";
-                author = "S. C. Clarke";
+                title = "Physic is really not fun";
+                author = "My Opinion";
                 break;
             case "fantasy":
             default:
-                title = "The Dragon's Eye";
-                author = "E. B. Tolkien";
+                title = "Passing this degree";
+                author = "My Dreams";
                 genre = "Fantasy";
                 break;
         }

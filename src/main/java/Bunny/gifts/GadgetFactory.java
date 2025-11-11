@@ -5,16 +5,16 @@ public class GadgetFactory implements GiftFactory {
     public Gift createGift(String type) {
         String name, model;
         if (type.toLowerCase().contains("smartwatch")) {
-            name = "Aura 5";
-            model = "SM-05";
+            name = "Dumbwatch";
+            model = "ABC 78";
             type = "Smartwatch";
         } else if (type.toLowerCase().contains("console")) {
-            name = "Zenith X";
-            model = "GC-01";
+            name = "Gaming buddy";
+            model = "345DV";
             type = "Gaming Console";
         } else {
-            name = "Clarity Buds";
-            model = "HP-77";
+            name = "Earbros";
+            model = "THS56";
             type = "Headphones";
         }
         return new Gadget(name, type, model);
