@@ -1,8 +1,10 @@
 package Bunny.deliver;
 
+import Bunny.child.Child;
+
 public class BoatDelivery implements DeliveryStrategy {
     @Override
-    public String getName() {
+    public String deliver(Child child) {
         return "Boat";
     }
 }

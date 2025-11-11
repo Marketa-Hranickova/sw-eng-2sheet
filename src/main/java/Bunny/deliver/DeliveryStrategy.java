@@ -1,6 +1,6 @@
 package Bunny.deliver;
+import Bunny.child.Child;
 
 public interface DeliveryStrategy {
-    String getName();
+    String deliver(Child child);
 }
-

@@ -1,22 +1,23 @@
 package Bunny.gifts;
 
-public class Gadget implements Gift {
-    private final String type;
-    private final String brand;
-    private final int minAge;
 
-    public Gadget(String type, String brand, int minAge) {
-        this.type = type;
-        this.brand = brand;
-        this.minAge = minAge;
-    }
-    @Override
-    public String getDescription() {
-        return brand + " " + type + " (Gadget)";
-    }
+    public class Gadget implements Gift {
+        private String name;
+        private String type;
+        private String model;
+        private int batteryLifeHours;
+        private String operatingSystem;
 
-    public int getMinAge() {
-        return minAge;
-    }
+        public Gadget(String name, String type, String model) {
+            this.name = name;
+            this.type = type;
+            this.model = model;
+            this.batteryLifeHours = (type.contains("smartwatch") ? 72 : 8);
+            this.operatingSystem = (type.contains("console") ? "CustomOS" : "Android");
+        }
 
-}
+        @Override
+        public String describe() {
+            return this.type + " (" + this.name + ", Model: " + this.model + ")";
+        }
+    }

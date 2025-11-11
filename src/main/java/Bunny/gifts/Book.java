@@ -1,22 +1,24 @@
 package Bunny.gifts;
 
-public class Book implements Gift {
-    private final String genre;
-    private final String title;
-    private final int minAge;
 
-    public Book(String genre, String title, int minAge) {
-        this.genre = genre;
+
+public class Book implements Gift {
+    private String title;
+    private String genre;
+    private String author;
+    private String isbn;
+    private int pages;
+
+    public Book(String title, String genre, String author) {
         this.title = title;
-        this.minAge = minAge;
+        this.genre = genre;
+        this.author = author;
+        this.isbn = "ISBN-" + Math.abs(title.hashCode());
+        this.pages = 250 + (title.length() * 5);
     }
 
     @Override
-    public String getDescription() {
-        return genre + " Book: " + title;
-    }
-
-    public int getRecommendedAge() {
-        return minAge;
+    public String describe() {
+        return this.genre + " Book (" + this.title + " by " + this.author + ")";
     }
 }

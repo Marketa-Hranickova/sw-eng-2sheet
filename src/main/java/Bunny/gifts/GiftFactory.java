@@ -1,5 +1,5 @@
 package Bunny.gifts;
 
 public interface GiftFactory {
-    Gift createGift(String preference, int age);
+    Gift createGift(String typeOrPreference);
 }

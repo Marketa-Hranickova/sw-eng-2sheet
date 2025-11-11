@@ -1,10 +1,9 @@
 package Bunny.deliver;
-
 import Bunny.child.Child;
 
-public class DroneDelivery implements DeliveryStrategy {
+public class SnowshoeHareDelivery implements DeliveryStrategy {
     @Override
     public String deliver(Child child) {
-        return "Drone";
+        return "Snowshoe Hare Bunny";
     }
 }
